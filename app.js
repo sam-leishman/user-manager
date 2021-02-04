@@ -9,6 +9,7 @@ app.set('views', './views');
 app.set('view engine', 'pug');
 
 app.use(express.urlencoded({extended:false}))
+app.use(express.static('public'))
 
 
 
@@ -27,10 +28,6 @@ app.get('/users', (req, res) => {
 
         res.render('users', { users: usersObj.users })
     })
-})
-
-app.get('/lookup', (req, res) => {
-    res.render('lookup')
 })
 
 app.post('/users', (req, res) => {

@@ -2,15 +2,40 @@ doctype html
 html
     head
         title= title
-        link(rel='stylesheet', href='./style.css')
         style(type="text/css").
+            h2, p {
+                text-align: center;
+            }
+
+            form {
+                display: flex;
+                justify-content: center;
+            }
+
             table {
                 border: 3px solid black;
                 border-collapse: collapse;
+                margin: auto;
             }
             th, td {
                 border: 1px solid black;
                 padding: 5px 10px;
             }
+
+            .navBar {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                border-bottom: 3px solid black;
+            }
+            .navBar h1 a {
+                text-decoration: none;
+                color: inherit;
+            }
     body
+        div.navBar
+            h1
+                a(href='/') User App
+            a(href='/users') Users
+            a(href='/form') Add yourself!
         block content

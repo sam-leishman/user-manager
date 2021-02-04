@@ -1,9 +1,0 @@
-extends layout
-
-block content
-    h2 Lookup another user!
-    form(method='POST', action='/users')
-        input(id='name', name='name', placeholder='name')
-        input(id='email', name='email', type='email', placeholder='email')
-        input(id='age', name='age', type='number', placeholder='age')
-        input(type='submit')
