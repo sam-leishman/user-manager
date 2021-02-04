@@ -1,6 +1,7 @@
 const express = require('express');
 const uuid = require('uuid');
 const fs = require('fs');
+const usersFile = require('./users.json');
 
 const app = express();
 
@@ -20,7 +21,12 @@ app.get('/form', (req, res) => {
 })
 
 app.get('/users', (req, res) => {
-    res.render('users')
+    fs.readFile('./users.json', (err, data) => {
+        if (err) throw err;
+        const usersObj = JSON.parse(data);
+
+        res.render('users', { users: usersObj.users })
+    })
 })
 
 app.get('/lookup', (req, res) => {
@@ -28,14 +34,24 @@ app.get('/lookup', (req, res) => {
 })
 
 app.post('/users', (req, res) => {
-    console.log(req.body)
     let user = {};
     user.id = uuid.v4();
     user.username = req.body.name;
     user.email = req.body.email;
     user.age = req.body.age;
-    // fs.writeFileSync('./users.json', JSON.stringify(user));
-    res.render('users')
+
+    usersFile.users.push(user)
+    const userData = JSON.stringify(usersFile)
+    fs.writeFile('./users.json', userData, (err) => {
+        if (err) throw err;
+    })
+
+    fs.readFile('./users.json', (err, data) => {
+        if (err) throw err;
+        const usersObj = JSON.parse(data);
+
+        res.render('users', { users: usersObj.users })
+    })
 })
 
 app.listen(3000, () => {

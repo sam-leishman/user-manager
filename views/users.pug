@@ -2,3 +2,15 @@ extends layout
 
 block content
     h2 Users Page
+    table
+        tr
+            th ID
+            th Name
+            th Email
+            th Age
+        each user in users
+            tr
+                td #{user.id}
+                td #{user.username}
+                td #{user.email}
+                td #{user.age}
