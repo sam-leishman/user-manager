@@ -1,16 +1,18 @@
 extends layout
 
 block content
-    h2 Users Page
-    table
-        tr
-            th ID
-            th Name
-            th Email
-            th Age
-        each user in users
+    div(class='users-div')
+        h2 Users Page
+        table
             tr
-                td #{user.id}
-                td #{user.username}
-                td #{user.email}
-                td #{user.age}
+                th ID
+                th Name
+                th Email
+                th Age
+            each user in users
+                tr.tableRow
+                    td #{user.id}
+                    td #{user.username}
+                    td #{user.email}
+                    td #{user.age}
+        a(class='edit-btn', href='/editUsers') Edit
