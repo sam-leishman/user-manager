@@ -1,38 +1,10 @@
-{"users": [
-  {
-    "id": "6fd0c062-5902-41d6-abdb-005f7b3273b4",
-    "username": "NEWNAME",
-    "email": "asdf@asdf.com",
-    "age": "2"
-  },
-  {
-    "id": "a9b6d8e9-23fd-47c2-81e5-b96a2c0cc918",
-    "username": "blah",
-    "email": "blah@gmail.com",
-    "age": "19"
-  },
-  {
-    "id": "048ac4e7-797c-4668-bed0-e77182c6874c",
-    "username": "yo",
-    "email": "asdf@asdf.com",
-    "age": "134"
-  },
-  {
-    "id": "2ab4d871-9c0b-4bd4-b5d5-3b83f022950d",
-    "username": "samleishman",
-    "email": "samuelleish@gmail.com",
-    "age": "117"
-  },
-  {
-    "id": "76e0ea6d-2fe2-4dcc-b6f7-04a15ce9dc0c",
-    "username": "Sam Leishman",
-    "email": "samuelleish@gmail.com",
-    "age": "17"
-  },
-  {
-    "id": "cc463381-1006-41b2-ad03-1ba6b2fd4daa",
-    "username": "asdf",
-    "email": "asdf@asdf.com",
-    "age": "108"
-  }
-]}
+{
+  "users": [
+    {
+      "id": "97e56152-1985-4141-822e-c626a6e78f24",
+      "username": "blah",
+      "email": "blah@gmail.com",
+      "age": "100"
+    }
+  ]
+}
